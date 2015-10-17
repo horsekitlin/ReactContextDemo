@@ -1,5 +1,28 @@
-# Webpack + Express hot-reload server -- dev/production
+#React Context Demo
 
-es6-babel, react, jquery+bootstrap, sass --> dev/production
+使用方法
 
-source from : [The ultimate webpack setup](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup)
+    $ git clone git@github.com:horsekitlin/ReactContextDemo.git
+
+    $ npm install
+
+run dev
+
+    $ npm run dev
+
+build
+
+    $npm run build
+
+tag
+
+    $ git tag
+
+    //step1
+    //step2
+    //step3
+
+
+謝謝各位
+
+Tomas Lin
