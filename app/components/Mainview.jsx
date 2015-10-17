@@ -4,12 +4,16 @@ class Button extends React.Component{
     }
     render(){
         return (
-            <button style={{background: this.props.color}}>
+            <button style={{background: this.context.color}}>
                 {this.props.children}
             </button>
        );
     }
 }
+
+Button.contextTypes = {
+    color: React.PropTypes.string
+};
 
 class Message extends React.Component{
     constructor(){
@@ -19,21 +23,24 @@ class Message extends React.Component{
         return(
             <div>
                 {this.props.text}
-                <Button color={this.props.color}>
+                <Button>
                     Delete
                 </Button>
             </div>
         );
     }
 }
-export default class Messageslist extends React.Component {
+class Messageslist extends React.Component {
     constructor() {
         super();
+    }
+    getChildContext(){
+        return {color: "purple"};
     }
     render() {
         const color = 'yellow';
         let children = ["hello", "world"].map((message) => {
-            return <Message text={message} color={color} />;
+            return <Message text={message} />;
         });
         return(
             <div>
@@ -43,3 +50,8 @@ export default class Messageslist extends React.Component {
     }
 }
 
+Messageslist.childContextTypes = {
+    color : React.PropTypes.string
+};
+
+export default Messageslist;
